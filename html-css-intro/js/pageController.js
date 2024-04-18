@@ -1,6 +1,13 @@
 export function initPageController(topic, pageTitles, prevTopic, nextTopic) {
   const nPages = pageTitles.length;
-  var iPage, main, header, prev, next, pages, temp;
+  let iPage,
+    main,
+    header,
+    prev,
+    next,
+    pages,
+    temp,
+    pageLinks = [];
 
   function nextPage() {
     loadPage(iPage + 1);
@@ -31,16 +38,25 @@ export function initPageController(topic, pageTitles, prevTopic, nextTopic) {
     fetch(`topic/${topic}/page${iPage}.html`)
       .then((response) => response.text())
       .then((html) => {
-        window.location.hash = "page" + iPage;
         temp.innerHTML = html;
         main.innerHTML = temp.querySelector("main").innerHTML;
         prev.style.visibility = iPage > 1 || prevTopic ? "visible" : "hidden";
         next.style.visibility =
           iPage < nPages || nextTopic ? "visible" : "hidden";
+
+        // Update active page link class
+        pageLinks.forEach((link, index) => {
+          console.log(link, index);
+          if (index + 1 === iPage) {
+            link.focus();
+          }
+        });
       })
       .catch((err) => {
         main.innerHTML = "<p>Error loading the page.</p>";
       });
+
+    window.location.hash = "page" + iPage;
   }
 
   function handleSpacebar(event) {
@@ -61,6 +77,8 @@ export function initPageController(topic, pageTitles, prevTopic, nextTopic) {
     }
     loadPage(pageNum);
   }
+
+  window.addEventListener("hashchange", checkHashAndLoadPage, false);
 
   window.onload = function () {
     header = document.querySelector("header h1");
@@ -84,7 +102,7 @@ export function initPageController(topic, pageTitles, prevTopic, nextTopic) {
 
     for (let i = 1; i <= nPages; i++) {
       const pageLink = document.createElement("a");
-      pageLink.href = "#";
+      pageLink.href = "#page" + i;
       pageLink.textContent = i;
       pageLink.title = pageTitles[i - 1]; // arrays are 0 based
       pageLink.classList.add("page");
@@ -94,6 +112,7 @@ export function initPageController(topic, pageTitles, prevTopic, nextTopic) {
       });
       pageLink.addEventListener("keydown", handleSpacebar);
       pages.appendChild(pageLink);
+      pageLinks.push(pageLink);
     }
 
     checkHashAndLoadPage();
