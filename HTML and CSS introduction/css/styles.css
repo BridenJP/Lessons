@@ -1,0 +1,247 @@
+/* Bigger font for presentation purposes */
+html {
+  font-size: 32px;
+  height: 100%;
+}
+
+/* Remove default margin and padding from the body to ensure no spacing around the page */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Times New Roman", serif;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+body.fouc {
+  visibility: hidden;
+}
+
+/* Apply a different font to all headings, the nav bar, and footer */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+nav,
+footer {
+  font-family: "Helvetica Neue", "Arial", sans-serif;
+}
+
+h1 {
+  font-size: 1.5rem;
+  color: #697eeb;
+}
+
+h2 {
+  font-size: 1.2rem;
+  margin-top: 0;
+  color: #5969c1;
+}
+
+/* For the header and footer: Center the textm give a solid background and white text, and add some padding */
+header,
+footer {
+  text-align: center;
+  background: #395c7e;
+  color: white;
+  padding: 0.5em;
+}
+
+footer {
+  font-size: 0.4rem;
+}
+
+/* We don't want any spacing around our header title */
+header h1 {
+  color: white;
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* Solid background for navigation bar */
+nav {
+  background: #cadce9;
+  font-size: 0.75rem;
+}
+
+/* Centered menu style, remove the default bullets that would be on a list */
+nav ul {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* For most of our list items we want extra space between, but not inside the menu */
+nav li {
+  line-height: normal;
+  text-align: center;
+}
+
+/* For the menu items: white text, treat as a block, and remove the underline */
+nav a {
+  color: white;
+  display: block;
+  padding: 0.5em;
+  text-decoration: none;
+  background: #3498db;
+  width: 6em;
+}
+
+nav a.page {
+  font-size: 0.75em;
+  margin: 0 1px;
+  width: 1em;
+}
+
+li#pages {
+  display: flex;
+}
+
+/* When the mouse is over the menu item or it has the focus, change the background color to highlight it */
+nav a:hover,
+nav a:focus {
+  background: #0078ff !important;
+  border: none;
+  outline: none;
+}
+
+/* Hint of gray to reduce harshness of pure white. Put some space around the outside. */
+main {
+  background: #fafafa;
+  padding: 1em;
+  flex: 1;
+}
+
+h1,
+h2,
+h3,
+p,
+ol,
+ul {
+  margin-top: 0;
+}
+
+/* More space between list items */
+li {
+  line-height: 150%;
+}
+
+.row {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2em;
+}
+
+.row > div {
+  flex: 1;
+}
+
+.row img {
+  width: 35%;
+}
+
+.row img.big {
+  width: 50%;
+}
+
+.row img.small {
+  width: 25%;
+}
+
+.float-l {
+  float: left;
+  margin-right: 1em;
+}
+
+.float-r {
+  float: right;
+  margin-left: 1em;
+}
+
+div.breakout {
+  background: #e5ffdf;
+  border: 1px solid #2b522f;
+  padding: 1rem;
+  border-radius: 14px 0 14px 0;
+}
+
+.breakout img {
+  border-radius: 14px 0 14px 0;
+  border: none;
+}
+
+pre,
+.code {
+  color: green;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.code {
+  font-size: 80%;
+  font-weight: bold;
+}
+
+pre {
+  font-size: 80%;
+  margin-left: 2em;
+}
+
+table.layout {
+  margin-bottom: 1em;
+  border-collapse: collapse;
+}
+
+table.layout td:first-child {
+  white-space: nowrap;
+}
+
+table.layout td,
+table.layout th {
+  padding: 0.25rem;
+  vertical-align: top;
+}
+
+table.layout th {
+  text-align: left;
+}
+
+table.vcenter td,
+table.vcenter th {
+  vertical-align: middle;
+}
+
+a.nice {
+  color: blue;
+  text-decoration: none;
+  border-bottom: 1px solid blue;
+}
+
+a.nice:hover {
+  background-color: yellow;
+  color: black;
+}
+
+a.up-next {
+  display: block;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  padding: 0.25em;
+  background: #006321;
+  border: 1px solid;
+  border-color: #99e0b1 #002c0f #002c0f #99e0b1;
+}
+
+a.up-next:hover {
+  background: #009d34;
+  color: white;
+}
