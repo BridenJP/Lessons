@@ -9,5 +9,5 @@ initPageController(
     "Website Design: HTML content",
   ],
   "",
-  "style.html"
+  "addstyle.html"
 );

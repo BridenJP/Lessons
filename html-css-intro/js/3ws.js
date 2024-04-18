@@ -7,5 +7,5 @@ initPageController(
     "Website Design: What, Why, <u>How</u>?",
   ],
   null,
-  "content.html"
+  "pagecontent.html"
 );
