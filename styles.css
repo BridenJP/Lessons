@@ -1,0 +1,77 @@
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Times New Roman", serif;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: linear-gradient(#004, #002);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+nav,
+footer {
+  font-family: "Helvetica Neue", "Arial", sans-serif;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #697eeb;
+}
+
+h2 {
+  font-size: 1.2rem;
+  margin-top: 0;
+  color: #5969c1;
+}
+
+/* For the header and footer: Center the textm give a solid background and white text, and add some padding */
+header,
+footer {
+  text-align: center;
+  background: #395c7e;
+  color: white;
+  padding: 0.5em;
+}
+
+footer {
+  font-size: 0.75rem;
+}
+
+/* We don't want any spacing around our header title */
+header h1 {
+  color: white;
+  margin: 0;
+}
+
+/* Hint of gray to reduce harshness of pure white. Put some space around the outside. */
+main {
+  background: #fafafa;
+  padding: 1em;
+  flex: 1;
+  margin: 0 auto;
+  width: 1200px;
+}
+
+h1,
+h2,
+h3,
+p,
+ol,
+ul {
+  margin-top: 0;
+}
+
+/* More space between list items */
+li {
+  line-height: 150%;
+}
