@@ -7,6 +7,7 @@ initPageController(
     "Website Design: The HTML document",
     "Website Design: HTML structure",
     "Website Design: HTML content",
+    "Website Design: An example",
   ],
   "",
   "addstyle.html"

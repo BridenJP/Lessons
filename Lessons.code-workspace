@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "sample",
+            "settings": {
+                "[html]": {
+                    "editor.formatOnSave": false
+                }
+            }		
+		},
+		{
+			"path": "lesson"
+		}
+	],
+	"settings": {}
+}

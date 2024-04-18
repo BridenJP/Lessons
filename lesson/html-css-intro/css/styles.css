@@ -245,3 +245,21 @@ a.up-next:hover {
   background: #009d34;
   color: white;
 }
+
+.exercise {
+  display: block;
+  background: rgb(173, 253, 197);
+  border: 1px solid navy;
+  border-radius: 0.5em;
+  text-align: center;
+  background-image: url("../img/exercise.png");
+  background-position: 0.5em center;
+  background-repeat: no-repeat;
+  background-size: 80px 80px;
+  padding: 10px 10px 10px 100px;
+  min-height: 84px;
+}
+
+.exercise a {
+  color: blue;
+}
