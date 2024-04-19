@@ -43,7 +43,16 @@ h2 {
 
 /* Set link color (regardless of whether visited) */
 a {
-  color: blue;
+  color: #007bff;
+  text-decoration-thickness: 1px;
+  text-decoration-color: #5f00b3;
+  text-underline-offset: 0.12em;
+  transition: color 0.3s;
+}
+
+a:hover,
+a:focus {
+  color: #0056b3;
 }
 
 /* For the header and footer: Center the textm give a solid background and white text, and add some padding */
@@ -102,6 +111,7 @@ nav a {
 /* When the mouse is over the menu item or it has the focus, change the background color to highlight it */
 nav a:hover,
 nav a:focus {
+  color: white;
   background: #0078ff;
   border: none;
   outline: none;
@@ -232,17 +242,6 @@ table.vcenter th {
   vertical-align: middle;
 }
 
-a.nice {
-  color: blue;
-  text-decoration: none;
-  border-bottom: 1px solid blue;
-}
-
-a.nice:hover {
-  background-color: yellow;
-  color: black;
-}
-
 a.up-next {
   display: block;
   color: white;
@@ -278,6 +277,10 @@ a.up-next:hover {
 
 .do.discuss {
   background-image: url("img/discuss.webp");
+}
+
+.do.work {
+  background-image: url("img/work.webp");
 }
 
 table.before-after {
