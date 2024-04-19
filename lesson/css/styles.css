@@ -246,13 +246,12 @@ a.up-next:hover {
   color: white;
 }
 
-.exercise {
+.do {
   display: block;
   background: rgb(173, 253, 197);
   border: 1px solid navy;
   border-radius: 0.5em;
   text-align: center;
-  background-image: url("../img/exercise.png");
   background-position: 0.5em center;
   background-repeat: no-repeat;
   background-size: 80px 80px;
@@ -260,6 +259,29 @@ a.up-next:hover {
   min-height: 84px;
 }
 
-.exercise a {
+.do a {
   color: blue;
+}
+
+.do.exercise {
+  background-image: url("img/exercise.png");
+}
+
+.do.discuss {
+  background-image: url("img/discuss.webp");
+}
+
+table.before-after {
+  width: 100%;
+}
+
+table.before-after td,
+table.before-after th {
+  text-align: center;
+}
+
+table.before-after iframe {
+  width: 45vw;
+  height: 600px;
+  border: 1px solid silver;
 }

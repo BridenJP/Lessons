@@ -1,4 +1,4 @@
-import { initPageController } from "./pageController.js";
+import { initPageController } from "../../js/pageController.js";
 initPageController(
   "3ws",
   [

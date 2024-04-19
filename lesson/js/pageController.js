@@ -34,6 +34,12 @@ export function initPageController(topic, pageTitles, prevTopic, nextTopic) {
     }
     iPage = p;
 
+    window.location.hash = `page${iPage}`;
+
+    updatePageContent();
+  }
+
+  function updatePageContent() {
     header.innerHTML = pageTitles[iPage - 1]; // Set the new title
     fetch(`topic/${topic}/page${iPage}.html`)
       .then((response) => response.text())
@@ -46,7 +52,6 @@ export function initPageController(topic, pageTitles, prevTopic, nextTopic) {
 
         // Update active page link class
         pageLinks.forEach((link, index) => {
-          console.log(link, index);
           if (index + 1 === iPage) {
             link.focus();
           }
@@ -55,8 +60,6 @@ export function initPageController(topic, pageTitles, prevTopic, nextTopic) {
       .catch((err) => {
         main.innerHTML = "<p>Error loading the page.</p>";
       });
-
-    window.location.hash = "page" + iPage;
   }
 
   function handleSpacebar(event) {
@@ -66,19 +69,16 @@ export function initPageController(topic, pageTitles, prevTopic, nextTopic) {
     }
   }
 
-  function checkHashAndLoadPage() {
+  window.addEventListener("hashchange", function () {
+    console.log(window.location.hash);
     const hash = window.location.hash;
-    let pageNum = 1; // Default to the first page
-    if (hash && hash.startsWith("#page")) {
-      const newPage = parseInt(hash.substring(5), 10);
-      if (!isNaN(newPage) && newPage >= 1 && newPage <= nPages) {
-        pageNum = newPage;
-      }
+    const pageNum = hash ? parseInt(hash.substring(5), 10) : 1;
+    if (!isNaN(pageNum) && pageNum >= 1 && pageNum <= nPages) {
+      loadPage(pageNum);
+    } else {
+      loadPage(1);
     }
-    loadPage(pageNum);
-  }
-
-  window.addEventListener("hashchange", checkHashAndLoadPage, false);
+  });
 
   window.onload = function () {
     header = document.querySelector("header h1");
@@ -115,7 +115,20 @@ export function initPageController(topic, pageTitles, prevTopic, nextTopic) {
       pageLinks.push(pageLink);
     }
 
-    checkHashAndLoadPage();
+    // Attempt to load the initial page based on the current hash, or default to the first page
+    let initialPage = 1;
+    const hash = window.location.hash;
+    console.log(hash);
+    if (hash.startsWith("#page")) {
+      const pageNum = parseInt(hash.slice(5), 10);
+      if (!isNaN(pageNum) && pageNum >= 1 && pageNum <= nPages) {
+        initialPage = pageNum;
+      }
+    }
+    loadPage(initialPage);
+
     document.body.style.visibility = "visible";
   };
+
+  console.log("firs", window.location.hash);
 }
