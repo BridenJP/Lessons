@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <main>
+      <section class="row">
+        <div>
+          <h1>So much more we can do!</h1>
+          <p>
+            We've looked at the basics of HTML and made a good start with CSS.
+          </p>
+          <h2>Resources</h2>
+          <p>To find out more about HTML tags and their attributes, CSS styling, and everything to do with building the web, visit:
+            <a href="https://w3schools.com">https://w3schools.com</a>.</p>          
+
+          <h2>Amazing what you can do with HTML and CSS</h2>
+          <ul>
+            <li>
+              <a href="https://www.csszengarden.com/" target="_blank"
+                >CSS Zen Garden</a
+              >
+              - a demonstration of what can be done with CSS design.
+            </li>
+            <li>
+              <a href="https://projects.verou.me/css3patterns/" target="_blank"
+                >CSS patterns</a
+              >
+              - Amazing patterns created with CSS.
+            </li>
+            <li>
+              <a href="https://codepen.io/collection/XyVkpQ/" target="_blank"
+                >css-doodle gallery</a
+              >
+              - Some incredible CSS animations and creations (Does require a
+              code library).
+            </li>
+          </ul>
+          <a class="up-next" href="ide.html"
+            >Up next: Tools for Web Design</a
+          >        </div>
+        <style>
+          #sample {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            max-width: 40vw;
+            text-align: center;
+          }
+          #sample > div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            height: 30vw;
+            width: 30vw;
+            border-radius: 1em;
+            background: blue;
+            animation: cycleStyles 8s infinite;
+          }
+          @keyframes cycleStyles {
+            0%,
+            24.99% {
+              background: radial-gradient(
+                    rgba(255, 255, 255, 0) 0,
+                    rgba(255, 255, 255, 0.15) 30%,
+                    rgba(255, 255, 255, 0.3) 32%,
+                    rgba(255, 255, 255, 0) 33%
+                  )
+                  0 0,
+                radial-gradient(
+                    rgba(255, 255, 255, 0) 0,
+                    rgba(255, 255, 255, 0.1) 11%,
+                    rgba(255, 255, 255, 0.3) 13%,
+                    rgba(255, 255, 255, 0) 14%
+                  )
+                  0 0,
+                radial-gradient(
+                    rgba(255, 255, 255, 0) 0,
+                    rgba(255, 255, 255, 0.2) 17%,
+                    rgba(255, 255, 255, 0.43) 19%,
+                    rgba(255, 255, 255, 0) 20%
+                  )
+                  0 110px,
+                radial-gradient(
+                    rgba(255, 255, 255, 0) 0,
+                    rgba(255, 255, 255, 0.2) 11%,
+                    rgba(255, 255, 255, 0.4) 13%,
+                    rgba(255, 255, 255, 0) 14%
+                  ) -130px -170px,
+                radial-gradient(
+                    rgba(255, 255, 255, 0) 0,
+                    rgba(255, 255, 255, 0.2) 11%,
+                    rgba(255, 255, 255, 0.4) 13%,
+                    rgba(255, 255, 255, 0) 14%
+                  )
+                  130px 370px,
+                radial-gradient(
+                    rgba(255, 255, 255, 0) 0,
+                    rgba(255, 255, 255, 0.1) 11%,
+                    rgba(255, 255, 255, 0.2) 13%,
+                    rgba(255, 255, 255, 0) 14%
+                  )
+                  0 0,
+                linear-gradient(
+                  45deg,
+                  #343702 0%,
+                  #184500 20%,
+                  #187546 30%,
+                  #006782 40%,
+                  #0b1284 50%,
+                  #760ea1 60%,
+                  #83096e 70%,
+                  #840b2a 80%,
+                  #b13e12 90%,
+                  #e27412 100%
+                );
+              background-size: 470px 470px, 970px 970px, 410px 410px,
+                610px 610px, 530px 530px, 730px 730px, 100% 100%;
+              background-color: #840b2a;
+            }
+            25%,
+            49.99% {
+              background: radial-gradient(
+                    hsl(0, 100%, 27%) 4%,
+                    hsl(0, 100%, 18%) 9%,
+                    hsla(0, 100%, 20%, 0) 9%
+                  )
+                  0 0,
+                radial-gradient(
+                    hsl(0, 100%, 27%) 4%,
+                    hsl(0, 100%, 18%) 8%,
+                    hsla(0, 100%, 20%, 0) 10%
+                  )
+                  50px 50px,
+                radial-gradient(
+                    hsla(0, 100%, 30%, 0.8) 20%,
+                    hsla(0, 100%, 20%, 0)
+                  )
+                  50px 0,
+                radial-gradient(
+                    hsla(0, 100%, 30%, 0.8) 20%,
+                    hsla(0, 100%, 20%, 0)
+                  )
+                  0 50px,
+                radial-gradient(
+                    hsla(0, 100%, 20%, 1) 35%,
+                    hsla(0, 100%, 20%, 0) 60%
+                  )
+                  50px 0,
+                radial-gradient(
+                    hsla(0, 100%, 20%, 1) 35%,
+                    hsla(0, 100%, 20%, 0) 60%
+                  )
+                  100px 50px,
+                radial-gradient(hsla(0, 100%, 15%, 0.7), hsla(0, 100%, 20%, 0))
+                  0 0,
+                radial-gradient(hsla(0, 100%, 15%, 0.7), hsla(0, 100%, 20%, 0))
+                  50px 50px,
+                linear-gradient(
+                    45deg,
+                    hsla(0, 100%, 20%, 0) 49%,
+                    hsla(0, 100%, 0%, 1) 50%,
+                    hsla(0, 100%, 20%, 0) 70%
+                  )
+                  0 0,
+                linear-gradient(
+                    -45deg,
+                    hsla(0, 100%, 20%, 0) 49%,
+                    hsla(0, 100%, 0%, 1) 50%,
+                    hsla(0, 100%, 20%, 0) 70%
+                  )
+                  0 0;
+              background-color: #300;
+              background-size: 100px 100px;
+            }
+            50%,
+            74.99% {
+              background: linear-gradient(27deg, #151515 5px, transparent 5px) 0
+                  5px,
+                linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+                linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+                linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+                linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+                linear-gradient(
+                  #1d1d1d 25%,
+                  #1a1a1a 25%,
+                  #1a1a1a 50%,
+                  transparent 50%,
+                  transparent 75%,
+                  #242424 75%,
+                  #242424
+                );
+              background-color: #131313;
+              background-size: 20px 20px;
+            }
+            75%,
+            99.99% {
+              background: radial-gradient(
+                  circle closest-side at 60% 43%,
+                  #b03 26%,
+                  rgba(187, 0, 51, 0) 27%
+                ),
+                radial-gradient(
+                  circle closest-side at 40% 43%,
+                  #b03 26%,
+                  rgba(187, 0, 51, 0) 27%
+                ),
+                radial-gradient(
+                  circle closest-side at 42% 22%,
+                  #d35 43%,
+                  rgba(221, 51, 85, 0) 45%
+                ),
+                radial-gradient(
+                  circle closest-side at 58% 22%,
+                  #d35 43%,
+                  rgba(221, 51, 85, 0) 45%
+                ),
+                radial-gradient(
+                  circle closest-side at 50% 35%,
+                  #d35 32%,
+                  rgba(221, 51, 85, 0) 27%
+                ),
+                radial-gradient(
+                    circle closest-side at 60% 43%,
+                    #b03 26%,
+                    rgba(187, 0, 51, 0) 27%
+                  )
+                  50px 50px,
+                radial-gradient(
+                    circle closest-side at 40% 43%,
+                    #b03 26%,
+                    rgba(187, 0, 51, 0) 27%
+                  )
+                  50px 50px,
+                radial-gradient(
+                    circle closest-side at 40% 22%,
+                    #d35 40%,
+                    rgba(221, 51, 85, 0) 45%
+                  )
+                  52px 50px,
+                radial-gradient(
+                    circle closest-side at 60% 22%,
+                    #d35 40%,
+                    rgba(221, 51, 85, 0) 45%
+                  )
+                  48px 50px,
+                radial-gradient(
+                    circle closest-side at 50% 35%,
+                    #d35 30%,
+                    rgba(221, 51, 85, 0) 37%
+                  )
+                  50px 50px;
+              background-color: #b03;
+              background-size: 100px 100px;
+            }
+          }
+        </style>
+        <div id="sample">
+          <div>This is NOT an image</div>
+          <p class="credit">
+            Rainbow bokeh by Auke Zwart; Upholstery by Nate Eagle;<br />
+            Carbon by Atle Mo & Sébastien Grosjean; Hearts by Lea Verou
+          </p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

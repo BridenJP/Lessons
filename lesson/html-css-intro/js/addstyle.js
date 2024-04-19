@@ -5,8 +5,9 @@ initPageController(
     "Website Design: Introduction to CSS",
     "Website Design: CSS selectors",
     "Website Design: Common CSS attributes",
-    "Website Design: Before and After",
+    "Website Design: Before and After CSS",
+    "Website Design: Lots to play with",
   ],
   "",
-  ""
+  "ide.html"
 );

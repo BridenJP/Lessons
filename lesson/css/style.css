@@ -41,6 +41,11 @@ h2 {
   color: #5969c1;
 }
 
+/* Set link color (regardless of whether visited) */
+a {
+  color: blue;
+}
+
 /* For the header and footer: Center the textm give a solid background and white text, and add some padding */
 header,
 footer {
@@ -94,22 +99,30 @@ nav a {
   width: 6em;
 }
 
+/* When the mouse is over the menu item or it has the focus, change the background color to highlight it */
+nav a:hover,
+nav a:focus {
+  background: #0078ff;
+  border: none;
+  outline: none;
+}
+
 nav a.page {
   font-size: 0.75em;
   margin: 0 1px;
   width: 1em;
 }
 
-li#pages {
-  display: flex;
+nav a.active {
+  background: #009456;
 }
 
-/* When the mouse is over the menu item or it has the focus, change the background color to highlight it */
-nav a:hover,
-nav a:focus {
-  background: #0078ff !important;
-  border: none;
-  outline: none;
+nav a.active:focus {
+  background: #008894;
+}
+
+li#pages {
+  display: flex;
 }
 
 /* Hint of gray to reduce harshness of pure white. Put some space around the outside. */
@@ -259,10 +272,6 @@ a.up-next:hover {
   min-height: 84px;
 }
 
-.do a {
-  color: blue;
-}
-
 .do.exercise {
   background-image: url("img/exercise.png");
 }
@@ -281,7 +290,13 @@ table.before-after th {
 }
 
 table.before-after iframe {
-  width: 45vw;
+  width: 44vw;
   height: 600px;
   border: 1px solid silver;
+}
+
+.credit {
+  margin: 0.5em 0;
+  font-size: 0.7rem;
+  font-family: "Arial Narrow", "Arial", sans-serif;
 }

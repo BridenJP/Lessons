@@ -53,7 +53,9 @@ export function initPageController(topic, pageTitles, prevTopic, nextTopic) {
         // Update active page link class
         pageLinks.forEach((link, index) => {
           if (index + 1 === iPage) {
-            link.focus();
+            link.classList.add("active"); // Add 'active' class to the current page link
+          } else {
+            link.classList.remove("active"); // Remove 'active' class from other links
           }
         });
       })
@@ -70,7 +72,6 @@ export function initPageController(topic, pageTitles, prevTopic, nextTopic) {
   }
 
   window.addEventListener("hashchange", function () {
-    console.log(window.location.hash);
     const hash = window.location.hash;
     const pageNum = hash ? parseInt(hash.substring(5), 10) : 1;
     if (!isNaN(pageNum) && pageNum >= 1 && pageNum <= nPages) {
@@ -118,7 +119,6 @@ export function initPageController(topic, pageTitles, prevTopic, nextTopic) {
     // Attempt to load the initial page based on the current hash, or default to the first page
     let initialPage = 1;
     const hash = window.location.hash;
-    console.log(hash);
     if (hash.startsWith("#page")) {
       const pageNum = parseInt(hash.slice(5), 10);
       if (!isNaN(pageNum) && pageNum >= 1 && pageNum <= nPages) {
@@ -129,6 +129,4 @@ export function initPageController(topic, pageTitles, prevTopic, nextTopic) {
 
     document.body.style.visibility = "visible";
   };
-
-  console.log("firs", window.location.hash);
 }
