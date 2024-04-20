@@ -21,16 +21,15 @@ export function initPageController(topic, pageTitles, prevTopic, nextTopic) {
     if (p < 1) {
       if (prevTopic) {
         window.location.href = prevTopic + "#last";
-      } else {
-        p = 1;
+        return;
       }
-    }
-    if (p > nPages) {
+      p = 1;
+    } else if (p > nPages) {
       if (nextTopic) {
         window.location.href = nextTopic;
-      } else {
-        p = nPages;
+        return;
       }
+      p = nPages;
     }
     iPage = p;
 
