@@ -9,6 +9,6 @@ initPageController(
     "Website Design: HTML content",
     "Website Design: An example",
   ],
-  "",
+  "3ws.html",
   "addstyle.html"
 );

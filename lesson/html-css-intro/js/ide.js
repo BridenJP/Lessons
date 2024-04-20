@@ -4,8 +4,8 @@ initPageController(
   [
     "Website Design: The Right Tools",
     "Website Design: VSCode plus GitHub",
-    "Website Design: ",
+    "Website Design: Summary",
   ],
-  null,
-  "pagecontent.html"
+  "addstyle.html",
+  null
 );

@@ -218,6 +218,14 @@ pre {
   margin-left: 2em;
 }
 
+.filename,
+.folder {
+  color: purple;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 85%;
+  font-weight: bold;
+}
+
 table.layout {
   margin-bottom: 1em;
   border-collapse: collapse;

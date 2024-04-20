@@ -20,7 +20,7 @@ export function initPageController(topic, pageTitles, prevTopic, nextTopic) {
   function loadPage(p) {
     if (p < 1) {
       if (prevTopic) {
-        window.location.href = prevTopic;
+        window.location.href = prevTopic + "#last";
       } else {
         p = 1;
       }
@@ -71,14 +71,20 @@ export function initPageController(topic, pageTitles, prevTopic, nextTopic) {
     }
   }
 
-  window.addEventListener("hashchange", function () {
+  function pageFromHash() {
     const hash = window.location.hash;
-    const pageNum = hash ? parseInt(hash.substring(5), 10) : 1;
-    if (!isNaN(pageNum) && pageNum >= 1 && pageNum <= nPages) {
-      loadPage(pageNum);
-    } else {
-      loadPage(1);
+    if (hash === "#last") {
+      return nPages;
     }
+    const pageNum = parseInt(hash.substring(5), 10);
+    if (!isNaN(pageNum) && pageNum >= 1 && pageNum <= nPages) {
+      return pageNum;
+    }
+    return 1;
+  }
+
+  window.addEventListener("hashchange", function () {
+    loadPage(pageFromHash());
   });
 
   window.onload = function () {
@@ -117,15 +123,7 @@ export function initPageController(topic, pageTitles, prevTopic, nextTopic) {
     }
 
     // Attempt to load the initial page based on the current hash, or default to the first page
-    let initialPage = 1;
-    const hash = window.location.hash;
-    if (hash.startsWith("#page")) {
-      const pageNum = parseInt(hash.slice(5), 10);
-      if (!isNaN(pageNum) && pageNum >= 1 && pageNum <= nPages) {
-        initialPage = pageNum;
-      }
-    }
-    loadPage(initialPage);
+    loadPage(pageFromHash());
 
     document.body.style.visibility = "visible";
   };

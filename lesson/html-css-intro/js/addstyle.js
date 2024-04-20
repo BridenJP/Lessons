@@ -8,6 +8,6 @@ initPageController(
     "Website Design: Before and After CSS",
     "Website Design: Lots to play with",
   ],
-  "",
+  "pagecontent.html",
   "ide.html"
 );
