@@ -1,0 +1,83 @@
+body,
+html {
+  height: revert; /* change to: 100% */
+  margin: revert; /* change to: 0 */
+}
+
+body {
+  display: revert; /* change to: flex */
+  flex-direction: revert; /* change to: column */
+  background: revert; /* change to: your main background color, e.g. #ebe4dd */
+  font-family: revert; /* change to: your selected font for your content: "Merriweather", "Times New Roman", serif */
+  overflow: revert; /* change to: hidden */
+}
+
+/* Common style for the header, nav bar, and footer */
+header,
+footer,
+nav {
+  color: revert; /* change to: the color for your text on these, e.g. white */
+  font-family: revert; /* change to: the font you want to use, e.g. "Tahoma", "Arial", sans-serif; */
+  text-align: revert; /* change to: center */
+}
+
+/* Specific styles for header and footer */
+header,
+footer {
+  background: revert; /* change to: background color, gradient, or image, e.g. #c44100 */
+  padding: revert; /* change to: the padding you want, e.g. 0.5em */
+}
+
+header {
+  font-size: revert; /* change to: a large size, e.g. 1.75em */
+}
+
+footer {
+  font-size: revert; /* change to: a small size, e.g. 0.75em */
+}
+
+/* Specific style for a link in the footer */
+footer a {
+  color: revert; /* change to: a color that will stand out on your background, e.g. #00ff99 */
+}
+
+/* Specific style for the navigation bar */
+nav {
+  display: revert; /* change to: flex (to use a row layout) */
+  align-items: revert; /* change to: center (this aligns items vertically) */
+  justify-content: revert; /* change to: center (this aligns items horizontally) */
+  background: revert; /* change to: background color, gradient, or image, e.g. #78974b */
+  margin-top: revert; /* change to: a small value to create a gap above the nav bar, e.g. 0.25em */
+}
+
+nav a {
+  color: revert; /* change to: white (if not changed this uses the default blue/purple) */
+  text-decoration: revert; /* change to: none (if not changed this uses the default underline) */
+  padding: revert; /* change to: a small value to add space around the text, e.g. 0.5rem */
+  transition: revert; /* change to: a CSS animation that happens when changing the background color (hover/focus), e.g. background-color 0.3s ease */
+}
+
+nav a:hover,
+nav a:focus {
+  background: revert; /* change to: a different background for when the mouse is over the link, e.g. #c99445 */
+}
+
+/* Style for the main content area */
+main {
+  overflow-y: revert; /* change to: auto (to make the vertical scroll bar appear when needed */
+  padding: revert; /* change to: a value to add space around the main text, e.g. 1em */
+  flex-grow: revert; /* change to: 1 (to let the box grow) */
+  flex-shrink: revert; /* change to: 1 (to let the box shrink) */
+}
+
+h1:first-child {
+  margin-top: revert; /* change to: 0 (to remove the top margin on the 1st h1 in a container */
+}
+
+h2 {
+  color: revert; /* change to: a different text color, e.g. #c44100 */
+}
+
+iframe {
+  border: revert; /* change to: none (to hide the bevelled border around an iframe */
+}
